@@ -8,20 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		52CFB8441FDABEF900430A15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFB8431FDABEF900430A15 /* AppDelegate.swift */; };
-		52CFB8461FDABEF900430A15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFB8451FDABEF900430A15 /* ViewController.swift */; };
+		52CFB8461FDABEF900430A15 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFB8451FDABEF900430A15 /* RecordSoundsViewController.swift */; };
 		52CFB8491FDABEF900430A15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CFB8471FDABEF900430A15 /* Main.storyboard */; };
 		52CFB84B1FDABEF900430A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CFB84A1FDABEF900430A15 /* Assets.xcassets */; };
 		52CFB84E1FDABEF900430A15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CFB84C1FDABEF900430A15 /* LaunchScreen.storyboard */; };
+		52CFB8561FDAE7C400430A15 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFB8551FDAE7C400430A15 /* PlaySoundsViewController.swift */; };
+		52E1A4501FDE689200F7A8CC /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1A44F1FDE689200F7A8CC /* PlaySoundsViewController+Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		524163FD1FDE78E30018FCF9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		52CFB8401FDABEF900430A15 /* pitchperfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pitchperfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CFB8431FDABEF900430A15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52CFB8451FDABEF900430A15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52CFB8451FDABEF900430A15 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		52CFB8481FDABEF900430A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52CFB84A1FDABEF900430A15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52CFB84D1FDABEF900430A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52CFB84F1FDABEF900430A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CFB8551FDAE7C400430A15 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		52E1A44F1FDE689200F7A8CC /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,11 +40,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5200BEAF1FDE73D8006C6439 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				524163FD1FDE78E30018FCF9 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52CFB8371FDABEF900430A15 = {
 			isa = PBXGroup;
 			children = (
 				52CFB8421FDABEF900430A15 /* pitchperfect */,
 				52CFB8411FDABEF900430A15 /* Products */,
+				5200BEAF1FDE73D8006C6439 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +69,13 @@
 			isa = PBXGroup;
 			children = (
 				52CFB8431FDABEF900430A15 /* AppDelegate.swift */,
-				52CFB8451FDABEF900430A15 /* ViewController.swift */,
-				52CFB8471FDABEF900430A15 /* Main.storyboard */,
 				52CFB84A1FDABEF900430A15 /* Assets.xcassets */,
-				52CFB84C1FDABEF900430A15 /* LaunchScreen.storyboard */,
 				52CFB84F1FDABEF900430A15 /* Info.plist */,
+				52CFB84C1FDABEF900430A15 /* LaunchScreen.storyboard */,
+				52CFB8471FDABEF900430A15 /* Main.storyboard */,
+				52CFB8551FDAE7C400430A15 /* PlaySoundsViewController.swift */,
+				52E1A44F1FDE689200F7A8CC /* PlaySoundsViewController+Audio.swift */,
+				52CFB8451FDABEF900430A15 /* RecordSoundsViewController.swift */,
 			);
 			path = pitchperfect;
 			sourceTree = "<group>";
@@ -136,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52CFB8461FDABEF900430A15 /* ViewController.swift in Sources */,
+				52CFB8461FDABEF900430A15 /* RecordSoundsViewController.swift in Sources */,
+				52E1A4501FDE689200F7A8CC /* PlaySoundsViewController+Audio.swift in Sources */,
+				52CFB8561FDAE7C400430A15 /* PlaySoundsViewController.swift in Sources */,
 				52CFB8441FDABEF900430A15 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,30 +291,38 @@
 		52CFB8531FDABEFA00430A15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 845YHJXAK5;
 				INFOPLIST_FILE = pitchperfect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.basicdas.pitchperfect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		52CFB8541FDABEFA00430A15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 845YHJXAK5;
 				INFOPLIST_FILE = pitchperfect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.basicdas.pitchperfect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
